@@ -1,0 +1,58 @@
+﻿@model WebApplication4.Models.Tutorial
+<hr />
+<a class="btn btn-primary" asp-action="Index">Show Tutorial Details</a>
+<hr />
+<h2>Delete tutorial</h2>
+<form method="post">
+    <div>
+        <h1>Tutorial Entry</h1>
+        <hr />
+        <table>
+            <tr>
+                <td>Tutorial Id</td>
+                <td>
+                    @*@Html.TextBoxFor(obj=>obj.TutorialId)*@
+                    <input type="text"  asp-for="TutorialId" disabled="disabled"/>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Tutorial Name</td>
+                <td>
+                    @*@Html.TextBoxFor(obj =>obj.TutorialName)*@
+                    <input type="text"  asp-for="TutorialName" disabled="disabled" />
+                </td>
+            </tr>
+            <tr>
+                <td>Tutorial Description</td>
+                <td>
+                    @*@Html.TextBoxFor(obj =>obj.TutorialDesc)*@
+                    <input type="text" asp-for="TutorialDesc" disabled="disabled" />
+                </td>
+            </tr>
+            <tr>
+                <td>Published</td>
+                <td>
+                    @*@Html.TextBoxFor(obj=>obj.Published)*@
+                    <input type="text"  asp-for="Published" disabled="disabled" />
+                </td>
+            </tr>
+            <tr>
+                <td>Tutorial fees</td>
+                <td>
+                    @*@Html.TextBoxFor(obj=>obj.TutorialFees)*@
+                    <input type="text"  asp-for="TutorialFees" disabled="disabled" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input id="Submit1" type="submit" value="delete" /></td>
+            </tr>
+        </table>
+        <hr />
+        <div>
+            @ViewBag.message
+        </div>
+    </div>
+</form>
+

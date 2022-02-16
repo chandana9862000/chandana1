@@ -1,0 +1,58 @@
+﻿@model WebApplication4.Models.Tutorial
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form method="post"> post-httppost get-httpget
+    <div>
+        <h1>Tutorial Entry</h1>
+        <hr/>
+        <table>
+            <tr>
+                <td>Tutorial Id</td>
+                <td>
+                    @*@Html.TextBoxFor(obj=>obj.TutorialId)*@
+                    <input type="text" value="" asp-for="TutorialId"/>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Tutorial Name</td>
+                <td>
+                    @*@Html.TextBoxFor(obj =>obj.TutorialName)*@
+                    <input type="text" value="" asp-for="TutorialName" />
+                </td>
+            </tr>
+            <tr>
+                <td>Tutorial Description</td>
+                <td>
+                    @*@Html.TextBoxFor(obj =>obj.TutorialDesc)*@
+                    <input type="text" value="" asp-for="TutorialDesc" />
+                </td>
+            </tr>
+            <tr>
+                <td>Published</td>
+                <td>
+                    @*@Html.TextBoxFor(obj=>obj.Published)*@
+                    <input type="text" value="" asp-for="Published" />
+                </td>
+            </tr>
+            <tr>
+                <td>Tutorial fees</td>
+                <td>
+                    @*@Html.TextBoxFor(obj=>obj.TutorialFees)*@
+                    <input type="text" value="" asp-for="TutorialFees" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input id="Submit1" type="submit" value="submit" /></td>
+            </tr>
+         </table>
+        <hr/>
+        <div>
+            @ViewBag.message
+        </div>
+    </div>
+    </form>
